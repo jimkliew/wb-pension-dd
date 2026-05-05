@@ -55,6 +55,16 @@ python3 -m http.server 8000
 # then visit http://localhost:8000
 ```
 
+## Rebuilding the PowerPoint deck
+
+The deck is generated programmatically. To rebuild after edits to `build_pptx.js`:
+
+```bash
+npm install
+node build_pptx.js
+# produces WB_Pension_DD_Demo.pptx
+```
+
 ## Standards referenced
 
 IOPS · OECD Core Principles · ILPA Principles 3.0 · ILPA DDQ · UN PRI · TCFD/IFRS S2 ·
