@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Monitoring | World Bank Pension Fund DD Platform — PROTOTYPE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="monitoring.html">
+
+<div id="wb-chrome-top"></div>
+
+<main class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Monitoring</div>
+      <h1>Continuous Monitoring</h1>
+      <div class="subtitle">Post-investment surveillance — automated quarterly refresh, alerts, and annual deep review for all GP relationships.</div>
+    </div>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:24px;">
+    <div class="kpi"><div class="kpi-label">GPs Under Monitoring</div><div class="kpi-value">23</div><div class="kpi-delta">$14.7B in commitments</div></div>
+    <div class="kpi success"><div class="kpi-label">On-Track Mandates</div><div class="kpi-value">19</div><div class="kpi-delta">82.6%</div></div>
+    <div class="kpi warning"><div class="kpi-label">Watch List</div><div class="kpi-value">3</div><div class="kpi-delta">Material developments</div></div>
+    <div class="kpi danger"><div class="kpi-label">Alerts (last 7d)</div><div class="kpi-value">12</div><div class="kpi-delta">2 require human review</div></div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3>Active Watch-List</h3></div>
+    <div class="card-body">
+      <div class="flag"><div class="flag-title">Watch · Manager X (Energy Infra LP)</div><div class="flag-detail">Risk Agent: leverage rose from 52% to 64% LTV in Q4 2025; flagged for IC quarterly update</div></div>
+      <div class="flag amber"><div class="flag-title">Watch · Manager Y (Multi-Strategy HF)</div><div class="flag-detail">Operational DD: Auditor change in 2026; under review for transition risk</div></div>
+      <div class="flag amber"><div class="flag-title">Watch · Manager Z (Asia PE)</div><div class="flag-detail">Legal: regulatory inquiry disclosed in latest investor letter — non-material per sponsor; monitoring</div></div>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header"><h3>Automated Monitoring Triggers</h3></div>
+      <div class="card-body prose">
+        <h3>Quarterly Refresh (auto)</h3>
+        <ul>
+          <li>Re-pull Form ADV / 10-K — diff against last version</li>
+          <li>Re-run sanctions screening (OFAC / UN / EU / UK)</li>
+          <li>Re-compute risk metrics from latest reporting</li>
+          <li>Refresh NGFS stress under current portfolio</li>
+        </ul>
+        <h3>Real-Time Alerts</h3>
+        <ul>
+          <li>Adverse media mention (LexisNexis feed)</li>
+          <li>Regulatory enforcement filing (SEC EDGAR / state regulators)</li>
+          <li>Key-person departure (LinkedIn / press release scrape)</li>
+          <li>Material redemption-gate activation</li>
+          <li>Auditor change / qualified opinion</li>
+        </ul>
+        <h3>Annual Deep Review</h3>
+        <ul>
+          <li>Full DD memo refresh by Orchestrator</li>
+          <li>QA Agent re-verification</li>
+          <li>IC sign-off to continue / reduce / exit</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h3>Alert Stream — Last 7 Days</h3></div>
+      <div class="card-body">
+        <div class="timeline">
+          <div class="timeline-item"><div class="ts">2026-05-04</div><div class="agent">Risk Agent</div><div class="msg">Apollo Energy II leverage breached 60% — auto-IC update generated</div></div>
+          <div class="timeline-item"><div class="ts">2026-05-03</div><div class="agent">Adverse Media</div><div class="msg">Manager X — Reuters story on litigation, classified non-material</div></div>
+          <div class="timeline-item"><div class="ts">2026-05-02</div><div class="agent">Documentation Agent</div><div class="msg">Quarterly auto-refresh complete for 23 GPs</div></div>
+          <div class="timeline-item"><div class="ts">2026-05-01</div><div class="agent">Operational DD</div><div class="msg">Manager Y disclosed auditor change — added to watch-list</div></div>
+          <div class="timeline-item"><div class="ts">2026-04-30</div><div class="agent">Legal Agent</div><div class="msg">OFAC re-scan executed across all 23 GPs — 0 matches</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div id="wb-chrome-bottom"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

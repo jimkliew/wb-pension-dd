@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DD Pipeline | World Bank Pension Fund DD Platform — PROTOTYPE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="pipeline.html">
+
+<div id="wb-chrome-top"></div>
+
+<main class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; DD Pipeline</div>
+      <h1>Due Diligence Pipeline</h1>
+      <div class="subtitle">All managers under active review. Click any fund to open its agent-driven workspace.</div>
+    </div>
+    <div>
+      <button class="btn btn-secondary">+ Initiate New DD</button>
+      <button class="btn btn-primary">Export Pipeline (PDF)</button>
+    </div>
+  </div>
+
+  <!-- Stage Pipeline View -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3>Workflow Stages · Current Position</h3></div>
+    <div class="card-body">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:11px;">
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">1. Intake</div>
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">2. Document</div>
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">3. Multi-Agent Analysis</div>
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">4. Risk Scoring</div>
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">5. QA Review</div>
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">6. IC Vote</div>
+        <div style="background:var(--wb-blue);color:#fff;padding:8px;border-radius:3px;text-align:center;font-weight:700;">7. Monitoring</div>
+
+        <div style="padding:8px;background:var(--wb-gray-100);border-radius:3px;text-align:center;">—</div>
+        <div style="padding:8px;background:var(--wb-gray-100);border-radius:3px;text-align:center;">—</div>
+        <div style="padding:8px;background:#FFF3CC;border-radius:3px;text-align:center;font-weight:600;">BREIT</div>
+        <div style="padding:8px;background:#FFF3CC;border-radius:3px;text-align:center;font-weight:600;">Fidelity</div>
+        <div style="padding:8px;background:#DCEFFA;border-radius:3px;text-align:center;font-weight:600;">Carlyle</div>
+        <div style="padding:8px;background:#DCEFFA;border-radius:3px;text-align:center;font-weight:600;">Bridgewater</div>
+        <div style="padding:8px;background:#DEF5DD;border-radius:3px;text-align:center;font-weight:600;">23 GPs</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="color:var(--wb-blue);margin-bottom:14px;font-size:16px;">Active Cases</h3>
+
+  <div class="grid grid-4">
+
+    <a href="fund-bridgewater.html" class="fund-card">
+      <div class="type-badge">Hedge Fund · DST RIA</div>
+      <h4>Bridgewater Associates, LP</h4>
+      <div class="aum">AUM ≈ $112.5B · Westport, CT · Founded 1975</div>
+      <div class="stats">
+        <div class="stat"><span class="stat-val">82</span><span class="stat-lbl">DD Score</span></div>
+        <div class="stat"><span class="stat-val">2</span><span class="stat-lbl">Flags</span></div>
+        <div class="stat"><span class="stat-val">IC</span><span class="stat-lbl">Stage</span></div>
+      </div>
+    </a>
+
+    <a href="fund-carlyle.html" class="fund-card">
+      <div class="type-badge">Private Equity · NASDAQ:CG</div>
+      <h4>The Carlyle Group, Inc.</h4>
+      <div class="aum">AUM ≈ $447B · Washington, DC · Founded 1987</div>
+      <div class="stats">
+        <div class="stat"><span class="stat-val">79</span><span class="stat-lbl">DD Score</span></div>
+        <div class="stat"><span class="stat-val">1</span><span class="stat-lbl">Flags</span></div>
+        <div class="stat"><span class="stat-val">QA</span><span class="stat-lbl">Stage</span></div>
+      </div>
+    </a>
+
+    <a href="fund-blackstone.html" class="fund-card">
+      <div class="type-badge">Real Estate · Non-Traded REIT</div>
+      <h4>Blackstone Real Estate Income Trust (BREIT)</h4>
+      <div class="aum">NAV ≈ $58B · Sponsor: NYSE:BX · Launched 2017</div>
+      <div class="stats">
+        <div class="stat"><span class="stat-val">71</span><span class="stat-lbl">DD Score</span></div>
+        <div class="stat"><span class="stat-val">3</span><span class="stat-lbl">Flags</span></div>
+        <div class="stat"><span class="stat-val">Field</span><span class="stat-lbl">Stage</span></div>
+      </div>
+    </a>
+
+    <a href="fund-fidelity.html" class="fund-card">
+      <div class="type-badge">Money Manager · Private</div>
+      <h4>Fidelity Investments (FMR LLC)</h4>
+      <div class="aum">AUM ≈ $5.3T · Boston, MA · Founded 1946</div>
+      <div class="stats">
+        <div class="stat"><span class="stat-val">88</span><span class="stat-lbl">DD Score</span></div>
+        <div class="stat"><span class="stat-val">1</span><span class="stat-lbl">Flags</span></div>
+        <div class="stat"><span class="stat-val">Field</span><span class="stat-lbl">Stage</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Detailed table -->
+  <div class="card" style="margin-top:28px;">
+    <div class="card-header"><h3>Pipeline Detail</h3></div>
+    <div class="card-body" style="padding:0;">
+      <table class="wb-table">
+        <thead>
+          <tr>
+            <th>Fund</th>
+            <th>Type</th>
+            <th>AUM</th>
+            <th>Mandate Size</th>
+            <th>DD Score</th>
+            <th>Stage</th>
+            <th>Lead Agent</th>
+            <th>Days Open</th>
+            <th>Flags</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bridgewater Associates</strong></td>
+            <td>Hedge Fund</td>
+            <td>$112.5B</td>
+            <td>$450M (Pure Alpha)</td>
+            <td><span class="risk-score"><span class="risk-dot risk-low"></span>82</span></td>
+            <td><span class="badge badge-blue">IC Review</span></td>
+            <td>Risk Agent</td>
+            <td>9</td>
+            <td><span class="badge badge-amber">2</span></td>
+            <td><a href="fund-bridgewater.html" class="btn btn-sm btn-secondary">Open</a></td>
+          </tr>
+          <tr>
+            <td><strong>The Carlyle Group</strong></td>
+            <td>Private Equity</td>
+            <td>$447B</td>
+            <td>$300M (CP VIII)</td>
+            <td><span class="risk-score"><span class="risk-dot risk-low"></span>79</span></td>
+            <td><span class="badge badge-blue">QA Review</span></td>
+            <td>Operational DD</td>
+            <td>14</td>
+            <td><span class="badge badge-amber">1</span></td>
+            <td><a href="fund-carlyle.html" class="btn btn-sm btn-secondary">Open</a></td>
+          </tr>
+          <tr>
+            <td><strong>Blackstone REIT (BREIT)</strong></td>
+            <td>Real Estate</td>
+            <td>$58B NAV</td>
+            <td>$200M (Class I)</td>
+            <td><span class="risk-score"><span class="risk-dot risk-med"></span>71</span></td>
+            <td><span class="badge badge-amber">Field Work</span></td>
+            <td>Liquidity Risk</td>
+            <td>17</td>
+            <td><span class="badge badge-red">3</span></td>
+            <td><a href="fund-blackstone.html" class="btn btn-sm btn-secondary">Open</a></td>
+          </tr>
+          <tr>
+            <td><strong>Fidelity Investments</strong></td>
+            <td>Money Manager</td>
+            <td>$5.3T</td>
+            <td>$1.2B (Multi-mandate)</td>
+            <td><span class="risk-score"><span class="risk-dot risk-low"></span>88</span></td>
+            <td><span class="badge badge-amber">Field Work</span></td>
+            <td>Governance</td>
+            <td>11</td>
+            <td><span class="badge badge-amber">1</span></td>
+            <td><a href="fund-fidelity.html" class="btn btn-sm btn-secondary">Open</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="source-citation" style="margin-top:18px;">Sources: SEC Form ADV (Part 1 &amp; 2A), Form 10-K filings (Carlyle CG, Blackstone BX), public annual reports, fund sponsor websites. Mandate sizes are illustrative scenario allocations for the simulated WB SRP exercise.</p>
+
+</main>
+
+<div id="wb-chrome-bottom"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

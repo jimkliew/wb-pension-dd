@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Implementation Roadmap | World Bank Pension Fund DD Platform — PROTOTYPE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="roadmap.html">
+
+<div id="wb-chrome-top"></div>
+
+<main class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Implementation</div>
+      <h1>Implementation Roadmap — Path to World Bank Production</h1>
+      <div class="subtitle">From prototype to enterprise rollout across the WB Group Staff Retirement Plan and beyond.</div>
+    </div>
+  </div>
+
+  <!-- Phases -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3>Phased Rollout (24-Month Plan)</h3></div>
+    <div class="card-body">
+
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px;font-size:11px;margin-bottom:24px;">
+        <div style="background:var(--wb-blue);color:#fff;padding:14px;border-radius:4px;">
+          <div style="font-weight:700;font-size:13px;">Phase 1</div>
+          <div style="font-size:11px;color:var(--wb-gold);">Month 0–3</div>
+          <div style="margin-top:8px;">Discovery &amp; Requirements</div>
+        </div>
+        <div style="background:var(--wb-blue);color:#fff;padding:14px;border-radius:4px;">
+          <div style="font-weight:700;font-size:13px;">Phase 2</div>
+          <div style="font-size:11px;color:var(--wb-gold);">Month 3–9</div>
+          <div style="margin-top:8px;">Pilot — 3 GPs</div>
+        </div>
+        <div style="background:var(--wb-blue);color:#fff;padding:14px;border-radius:4px;">
+          <div style="font-weight:700;font-size:13px;">Phase 3</div>
+          <div style="font-size:11px;color:var(--wb-gold);">Month 9–15</div>
+          <div style="margin-top:8px;">Production — Full Pipeline</div>
+        </div>
+        <div style="background:var(--wb-blue);color:#fff;padding:14px;border-radius:4px;">
+          <div style="font-weight:700;font-size:13px;">Phase 4</div>
+          <div style="font-size:11px;color:var(--wb-gold);">Month 15–21</div>
+          <div style="margin-top:8px;">Continuous Monitoring</div>
+        </div>
+        <div style="background:var(--wb-blue);color:#fff;padding:14px;border-radius:4px;">
+          <div style="font-weight:700;font-size:13px;">Phase 5</div>
+          <div style="font-size:11px;color:var(--wb-gold);">Month 21+</div>
+          <div style="margin-top:8px;">Standard Adoption — Global</div>
+        </div>
+      </div>
+
+      <table class="wb-table">
+        <thead><tr><th>Phase</th><th>Workstreams</th><th>Deliverables</th><th>Owners</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Discovery</strong><br><small>Mo 0–3</small></td>
+            <td>Requirements gathering · existing DD workflow capture · regulatory mapping · stakeholder alignment</td>
+            <td>BRD · Risk &amp; Governance Charter · Data inventory · Vendor short-list</td>
+            <td>Treasury · CIO · CRO</td>
+          </tr>
+          <tr>
+            <td><strong>2. Pilot</strong><br><small>Mo 3–9</small></td>
+            <td>Run platform on 3 selected new commitments end-to-end · validate vs human DD baseline · iterate prompts · build connectors (SEC EDGAR, OFAC, Cambridge, NGFS, Bloomberg)</td>
+            <td>Pilot DD memos · agent prompt library · audit-log infrastructure · IC dashboard</td>
+            <td>Treasury IT · CIO Office · External integrator</td>
+          </tr>
+          <tr>
+            <td><strong>3. Production</strong><br><small>Mo 9–15</small></td>
+            <td>Full DD pipeline integration · ServiceNow workflow integration · SSO/SAML · model fine-tuning on WB historical DD memos</td>
+            <td>Production go-live · IC integration · automated quarterly refresh</td>
+            <td>WB ITS · Treasury · External integrator</td>
+          </tr>
+          <tr>
+            <td><strong>4. Monitoring</strong><br><small>Mo 15–21</small></td>
+            <td>23 existing GPs migrated to continuous monitoring · alert tuning · annual deep-review automation</td>
+            <td>Monitoring dashboard · alert SLA · annual review templates</td>
+            <td>Treasury · Risk</td>
+          </tr>
+          <tr>
+            <td><strong>5. Standard Adoption</strong><br><small>Mo 21+</small></td>
+            <td>Endorsement campaign — IOPS, OECD WPPP, IFSWF · TA programs to client-country pension systems</td>
+            <td>Standards adoption MOUs · TA toolkit · Train-the-trainer programs</td>
+            <td>WB Knowledge &amp; Learning · Treasury</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header"><h3>Integration Targets</h3></div>
+      <div class="card-body prose">
+        <h3>Internal Systems</h3>
+        <ul>
+          <li>WB Treasury portfolio management system</li>
+          <li>SAP / financial systems for capital-call &amp; distribution accounting</li>
+          <li>ServiceNow for workflow &amp; IC scheduling</li>
+          <li>SharePoint / WB Document Vault for archival</li>
+          <li>WB Identity (Okta / Azure AD SSO)</li>
+        </ul>
+        <h3>External Data Sources</h3>
+        <ul>
+          <li>SEC EDGAR (Form ADV, 10-K, 10-Q)</li>
+          <li>OFAC SDN, UN, EU, UK sanctions lists</li>
+          <li>LexisNexis Bridger / Refinitiv World-Check (PEP &amp; adverse media)</li>
+          <li>Cambridge Associates / HFRI / NCREIF benchmarks</li>
+          <li>Bloomberg / MSCI / Sustainalytics</li>
+          <li>UN PRI, GRESB, EDCI, TCFD disclosures</li>
+          <li>NGFS climate scenarios</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h3>Cost &amp; Resourcing (Indicative)</h3></div>
+      <div class="card-body" style="padding:0;">
+        <table class="wb-table">
+          <thead><tr><th>Category</th><th>Year 1</th><th>Year 2 (Run)</th></tr></thead>
+          <tbody>
+            <tr><td>Cloud infrastructure (private VPC)</td><td>$0.6M</td><td>$0.4M</td></tr>
+            <tr><td>LLM &amp; inference (incl. model usage)</td><td>$1.2M</td><td>$0.9M</td></tr>
+            <tr><td>External data subscriptions</td><td>$1.4M</td><td>$1.4M</td></tr>
+            <tr><td>Implementation partner (Yr1)</td><td>$3.5M</td><td>$0.5M (run)</td></tr>
+            <tr><td>WB internal team (3 FTE)</td><td>$1.1M</td><td>$1.1M</td></tr>
+            <tr><td>Security audits, penetration testing</td><td>$0.4M</td><td>$0.2M</td></tr>
+            <tr><td><strong>Total</strong></td><td><strong>$8.2M</strong></td><td><strong>$4.5M</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body source-citation">Indicative for prototype demonstration; subject to procurement and final scope.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:24px;">
+    <div class="card-header"><h3>Expected Benefits</h3></div>
+    <div class="card-body">
+      <div class="grid grid-3">
+        <div class="kpi success"><div class="kpi-label">Cycle Time</div><div class="kpi-value">−78%</div><div class="kpi-delta">50 days → 11 days</div></div>
+        <div class="kpi success"><div class="kpi-label">Coverage</div><div class="kpi-value">+3×</div><div class="kpi-delta">More managers screened per FTE</div></div>
+        <div class="kpi success"><div class="kpi-label">Audit Quality</div><div class="kpi-value">100%</div><div class="kpi-delta">Citation-grade evidence on every claim</div></div>
+        <div class="kpi success"><div class="kpi-label">Standardization</div><div class="kpi-value">1 std</div><div class="kpi-delta">Across all asset classes &amp; client funds</div></div>
+        <div class="kpi success"><div class="kpi-label">Continuous</div><div class="kpi-value">24/7</div><div class="kpi-delta">Real-time monitoring vs annual review</div></div>
+        <div class="kpi success"><div class="kpi-label">Risk Reduction</div><div class="kpi-value">~$10–30M</div><div class="kpi-delta">Avoided losses (illustrative)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:24px;">
+    <div class="card-header"><h3>Risks &amp; Mitigants for Implementation</h3></div>
+    <div class="card-body" style="padding:0;">
+      <table class="wb-table">
+        <thead><tr><th>Risk</th><th>Mitigant</th></tr></thead>
+        <tbody>
+          <tr><td>LLM hallucination / fabricated facts</td><td>Mandatory citation guardrail in every agent prompt; QA Agent re-verifies; never accept uncited claims</td></tr>
+          <tr><td>Data privacy / IP exposure</td><td>Private VPC deployment; no data leaves WB perimeter; encryption at rest &amp; in transit; PII redaction</td></tr>
+          <tr><td>Model drift / version risk</td><td>Frozen model versions per release; A/B testing on historical DD memos; quarterly re-validation</td></tr>
+          <tr><td>Over-reliance / automation bias</td><td>Human-in-loop required at Sub-Agent Sign-off, QA, Legal, CIO, IC stages — five gates</td></tr>
+          <tr><td>Regulatory questioning of AI use</td><td>Full audit log; transparent agent prompts; explainable outputs; supervisor sign-off retained</td></tr>
+          <tr><td>Vendor lock-in</td><td>Multi-model architecture; standardized prompt schema; portable evidence vault</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:24px;background:var(--wb-blue);color:#fff;">
+    <div class="card-body" style="text-align:center;padding:30px;">
+      <div style="font-size:12px;letter-spacing:2px;color:var(--wb-gold);text-transform:uppercase;">Next Steps</div>
+      <h2 style="margin:10px 0;color:#fff;font-size:22px;">From Prototype to Production</h2>
+      <p style="max-width:760px;margin:0 auto;font-size:14px;">Approve a 90-day discovery sprint with WB Treasury and Pensions Department to validate scope, security, and integration design. Targeted pilot kick-off Q3 2026 with three new commitments under live agent-driven DD review.</p>
+    </div>
+  </div>
+
+</main>
+
+<div id="wb-chrome-bottom"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | World Bank Pension Fund DD Platform — PROTOTYPE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="index.html">
+
+<div id="wb-chrome-top"></div>
+
+<main class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Dashboard</div>
+      <h1>Investment Due Diligence Dashboard</h1>
+      <div class="subtitle">Multi-agent due diligence pipeline for World Bank Group Staff Retirement Plan &amp; Trust (SRP) — Prototype build, May 2026</div>
+    </div>
+    <div>
+      <a href="pipeline.html" class="btn btn-primary">View Full Pipeline</a>
+    </div>
+  </div>
+
+  <!-- KPI Strip -->
+  <div class="grid grid-4" style="margin-bottom: 24px;">
+    <div class="kpi success">
+      <div class="kpi-label">Active DD Cases</div>
+      <div class="kpi-value">4</div>
+      <div class="kpi-delta">2 in IC review · 2 in field work</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">AUM Under Review</div>
+      <div class="kpi-value">$5.91T</div>
+      <div class="kpi-delta">Across HF · PE · RE · MM</div>
+    </div>
+    <div class="kpi warning">
+      <div class="kpi-label">Open Red Flags</div>
+      <div class="kpi-value">7</div>
+      <div class="kpi-delta down">3 critical · 4 advisory</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Median Cycle Time</div>
+      <div class="kpi-value">11 days</div>
+      <div class="kpi-delta up">↓ 78% vs 50-day baseline</div>
+    </div>
+  </div>
+
+  <div class="grid grid-3" style="grid-template-columns: 2fr 1fr;">
+
+    <!-- Active DD Cases -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Active Due Diligence Cases</h3>
+        <a href="pipeline.html" class="btn btn-sm btn-secondary">All Cases</a>
+      </div>
+      <div class="card-body" style="padding:0;">
+        <table class="wb-table">
+          <thead>
+            <tr>
+              <th>Fund</th>
+              <th>Mandate</th>
+              <th>Stage</th>
+              <th>Score</th>
+              <th>Lead Agent</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="fund-bridgewater.html"><strong>Bridgewater Associates</strong></a><br>
+                <small style="color:var(--wb-gray-500);">Pure Alpha · All Weather</small>
+              </td>
+              <td>Hedge Fund</td>
+              <td><span class="badge badge-blue">IC Review</span></td>
+              <td><span class="risk-score"><span class="risk-dot risk-low"></span> 82 / 100</span></td>
+              <td>Risk Agent</td>
+              <td><span class="badge badge-amber">2 Flags</span></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="fund-carlyle.html"><strong>The Carlyle Group</strong></a><br>
+                <small style="color:var(--wb-gray-500);">Carlyle Partners VIII (Buyout)</small>
+              </td>
+              <td>Private Equity</td>
+              <td><span class="badge badge-blue">QA Review</span></td>
+              <td><span class="risk-score"><span class="risk-dot risk-low"></span> 79 / 100</span></td>
+              <td>Operational DD</td>
+              <td><span class="badge badge-green">On Track</span></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="fund-blackstone.html"><strong>Blackstone Real Estate (BREIT)</strong></a><br>
+                <small style="color:var(--wb-gray-500);">Industrial · Rental Housing</small>
+              </td>
+              <td>Real Estate</td>
+              <td><span class="badge badge-amber">Field Work</span></td>
+              <td><span class="risk-score"><span class="risk-dot risk-med"></span> 71 / 100</span></td>
+              <td>Liquidity Risk</td>
+              <td><span class="badge badge-red">3 Flags</span></td>
+            </tr>
+            <tr>
+              <td>
+                <a href="fund-fidelity.html"><strong>Fidelity Investments</strong></a><br>
+                <small style="color:var(--wb-gray-500);">Contrafund · 500 Index · Magellan</small>
+              </td>
+              <td>Money Manager</td>
+              <td><span class="badge badge-amber">Field Work</span></td>
+              <td><span class="risk-score"><span class="risk-dot risk-low"></span> 88 / 100</span></td>
+              <td>Governance</td>
+              <td><span class="badge badge-green">On Track</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Live Agent Activity -->
+    <div class="card">
+      <div class="card-header">
+        <h3>Live Agent Activity</h3>
+        <span class="badge badge-green">● Live</span>
+      </div>
+      <div class="card-body">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="ts">14:32:08 UTC</div>
+            <div class="agent">▶ Risk Agent · Bridgewater</div>
+            <div class="msg">Computed 5-yr rolling Sharpe (Pure Alpha): 0.71. Within mandate band [0.5–1.5].</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ts">14:30:51 UTC</div>
+            <div class="agent">▶ Legal &amp; Compliance · Carlyle</div>
+            <div class="msg">OFAC SDN scan complete — 0 matches across 31 fund principals.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ts">14:29:14 UTC</div>
+            <div class="agent">▶ Operational DD · BREIT</div>
+            <div class="msg">⚠ Flag raised: NAV smoothing methodology lacks 3rd-party valuation cross-check on 22% of portfolio.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ts">14:27:45 UTC</div>
+            <div class="agent">▶ ESG Agent · Fidelity</div>
+            <div class="msg">SFDR Article 8 alignment confirmed for 12 of 14 in-scope strategies. Reviewing remainder.</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ts">14:25:11 UTC</div>
+            <div class="agent">▶ Orchestrator</div>
+            <div class="msg">Re-routing BREIT redemption-gate analysis from Liquidity → Risk + Legal (sub-tasks).</div>
+          </div>
+          <div class="timeline-item">
+            <div class="ts">14:23:00 UTC</div>
+            <div class="agent">▶ Documentation Agent</div>
+            <div class="msg">PDF audit log generated for Carlyle CP VIII — 247 evidence artifacts indexed.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Risk Heatmap -->
+  <div class="card" style="margin-top: 24px;">
+    <div class="card-header">
+      <h3>Risk Heat Map · Across Active Cases</h3>
+      <a href="risk.html" class="btn btn-sm btn-secondary">Detail View</a>
+    </div>
+    <div class="card-body">
+      <div class="heatmap">
+        <div class="h-cell h-label">Risk Domain</div>
+        <div class="h-cell h-label">Bridgewater</div>
+        <div class="h-cell h-label">Carlyle</div>
+        <div class="h-cell h-label">BREIT</div>
+        <div class="h-cell h-label">Fidelity</div>
+        <div class="h-cell h-label">Avg.</div>
+        <div class="h-cell h-label">Trend</div>
+
+        <div class="h-cell h-row-label">Market Risk</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">→</div>
+
+        <div class="h-cell h-row-label">Liquidity Risk</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-high">High</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-high">↑</div>
+
+        <div class="h-cell h-row-label">Operational</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">→</div>
+
+        <div class="h-cell h-row-label">Governance</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">→</div>
+
+        <div class="h-cell h-row-label">Legal / Sanctions</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">→</div>
+
+        <div class="h-cell h-row-label">ESG / Climate</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-high">High</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-high">↑</div>
+
+        <div class="h-cell h-row-label">Concentration</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-med">Med</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">Low</div>
+        <div class="h-cell h-low">→</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-top: 24px;">
+
+    <div class="card">
+      <div class="card-header"><h3>Open Red Flags · By Severity</h3></div>
+      <div class="card-body">
+        <div class="flag">
+          <div class="flag-title">⚠ BREIT — Redemption-gate activation pattern (Q1 2023, Q4 2022)</div>
+          <div class="flag-detail">Sponsor invoked redemption caps. Liquidity Agent recommends scenario-stress at 200% historical redemption velocity before commitment.</div>
+        </div>
+        <div class="flag">
+          <div class="flag-title">⚠ BREIT — Independent valuation coverage = 78% of NAV</div>
+          <div class="flag-detail">Operational DD: 22% of portfolio relies on internal valuation only. Below WB threshold of 90%.</div>
+        </div>
+        <div class="flag">
+          <div class="flag-title">⚠ Bridgewater — Key-person clustering at strategy level</div>
+          <div class="flag-detail">Governance: Pure Alpha PM team has 3-person concentration. Mitigant: documented succession plan post-Dalio transition (2022).</div>
+        </div>
+        <div class="flag amber">
+          <div class="flag-title">▲ Carlyle — Fee-and-carry alignment with WB benchmarks</div>
+          <div class="flag-detail">Standard 2/20; below median for vintage. No action needed but flagged for IC visibility.</div>
+        </div>
+        <div class="flag amber">
+          <div class="flag-title">▲ Fidelity — Soft-dollar disclosures (Form ADV Part 2A)</div>
+          <div class="flag-detail">Standard industry practice; logged for completeness.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h3>Governance Cadence · Next 14 Days</h3></div>
+      <div class="card-body">
+        <table class="wb-table">
+          <thead><tr><th>Date</th><th>Event</th><th>Owner</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>May 7</td><td>IC Pre-Read Distribution — Bridgewater</td><td>Doc Agent</td><td><span class="badge badge-green">Auto</span></td></tr>
+            <tr><td>May 8</td><td>BREIT Liquidity Deep-Dive Workshop</td><td>Risk Lead</td><td><span class="badge badge-amber">Scheduled</span></td></tr>
+            <tr><td>May 12</td><td>Investment Committee Vote — Bridgewater</td><td>IC Chair</td><td><span class="badge badge-blue">Scheduled</span></td></tr>
+            <tr><td>May 14</td><td>Carlyle CP VIII Side-Letter Negotiation</td><td>Legal Lead</td><td><span class="badge badge-amber">Active</span></td></tr>
+            <tr><td>May 15</td><td>Quarterly Monitoring Refresh — Existing GPs</td><td>Monitoring Agent</td><td><span class="badge badge-green">Auto</span></td></tr>
+            <tr><td>May 19</td><td>Fidelity DDQ Round 2 — Reverse Inquiry</td><td>Intake Agent</td><td><span class="badge badge-blue">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div id="wb-chrome-bottom"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

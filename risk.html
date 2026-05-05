@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Risk Scoring | World Bank Pension Fund DD Platform — PROTOTYPE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="risk.html">
+
+<div id="wb-chrome-top"></div>
+
+<main class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Risk Scoring</div>
+      <h1>Composite Risk Scoring</h1>
+      <div class="subtitle">Risk Agent + Liquidity + Operational + Legal + ESG + Governance domains aggregated into a single composite score with WB threshold gates.</div>
+    </div>
+    <div><button class="btn btn-secondary">Methodology PDF</button></div>
+  </div>
+
+  <!-- Methodology -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3>Composite Score Methodology</h3></div>
+    <div class="card-body prose">
+      <p>The composite DD Score is a weighted aggregate of seven domain scores (each 0–100). Weights reflect WB Treasury &amp; Pension Investment Committee policy. Any single domain scoring below 60 triggers an automatic IC-level review regardless of composite score.</p>
+      <table class="wb-table">
+        <thead><tr><th>Domain</th><th>Weight</th><th>Threshold</th><th>Source Agent</th></tr></thead>
+        <tbody>
+          <tr><td>Financial &amp; Performance</td><td>20%</td><td>≥ 65</td><td>Financial DD Agent</td></tr>
+          <tr><td>Operational</td><td>15%</td><td>≥ 70</td><td>Operational DD Agent</td></tr>
+          <tr><td>Liquidity</td><td>15%</td><td>≥ 60</td><td>Liquidity Agent</td></tr>
+          <tr><td>Legal &amp; Compliance</td><td>15%</td><td>≥ 75 (zero-tolerance items disqualify)</td><td>Legal Agent</td></tr>
+          <tr><td>Governance</td><td>15%</td><td>≥ 65</td><td>Governance Agent</td></tr>
+          <tr><td>Risk (market / concentration)</td><td>10%</td><td>≥ 60</td><td>Risk Agent</td></tr>
+          <tr><td>ESG &amp; Climate</td><td>10%</td><td>≥ 55</td><td>ESG Agent</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Comparative scoring -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3>Domain Scores · Across Pipeline</h3></div>
+    <div class="card-body" style="padding:0;">
+      <table class="wb-table">
+        <thead><tr><th>Domain</th><th>Bridgewater</th><th>Carlyle</th><th>BREIT</th><th>Fidelity</th><th>Mandate Cap</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Financial &amp; Performance</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:84%"></div></div>84</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:82%"></div></div>82</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>78</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>90</td>
+            <td>≥ 65</td>
+          </tr>
+          <tr>
+            <td><strong>Operational</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>88</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:85%"></div></div>85</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:62%;background:linear-gradient(90deg,#F57C00,#E31A1A)"></div></div>62 ⚠</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:91%"></div></div>91</td>
+            <td>≥ 70</td>
+          </tr>
+          <tr>
+            <td><strong>Liquidity</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:82%"></div></div>82</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:72%"></div></div>72</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:55%;background:linear-gradient(90deg,#F57C00,#E31A1A)"></div></div>55 ⚠</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:95%"></div></div>95</td>
+            <td>≥ 60</td>
+          </tr>
+          <tr>
+            <td><strong>Legal &amp; Compliance</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div>92</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>88</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:84%"></div></div>84</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:90%"></div></div>90</td>
+            <td>≥ 75</td>
+          </tr>
+          <tr>
+            <td><strong>Governance</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:73%"></div></div>73</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:81%"></div></div>81</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>75</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>80</td>
+            <td>≥ 65</td>
+          </tr>
+          <tr>
+            <td><strong>Risk (market/concentration)</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>80</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>75</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:68%"></div></div>68</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div>88</td>
+            <td>≥ 60</td>
+          </tr>
+          <tr>
+            <td><strong>ESG &amp; Climate</strong></td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:65%"></div></div>65</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:68%"></div></div>68</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div>60</td>
+            <td><div class="progress-bar"><div class="progress-fill" style="width:78%"></div></div>78</td>
+            <td>≥ 55</td>
+          </tr>
+          <tr style="background:var(--wb-blue);color:#fff;">
+            <td><strong>COMPOSITE SCORE</strong></td>
+            <td style="font-size:18px;font-weight:700;">82</td>
+            <td style="font-size:18px;font-weight:700;">79</td>
+            <td style="font-size:18px;font-weight:700;color:var(--wb-gold);">71 ⚠</td>
+            <td style="font-size:18px;font-weight:700;">88</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid grid-2" style="margin-bottom:24px;">
+    <div class="card">
+      <div class="card-header"><h3>Stress Scenario Results</h3></div>
+      <div class="card-body" style="padding:0;">
+        <table class="wb-table">
+          <thead><tr><th>Scenario</th><th>BW</th><th>CG</th><th>BREIT</th><th>FID</th></tr></thead>
+          <tbody>
+            <tr><td>2008 GFC repeat (12-mo)</td><td>−14.2%</td><td>−24.0%</td><td>−18.8%</td><td>−31.0%</td></tr>
+            <tr><td>2020 COVID shock (90-day)</td><td>−9.8%</td><td>−12.5%</td><td>−6.1%</td><td>−19.4%</td></tr>
+            <tr><td>2022 rates regime (12-mo)</td><td>+8.2%</td><td>−9.0%</td><td>−7.5%</td><td>−12.0%</td></tr>
+            <tr><td>NGFS — Disorderly Transition</td><td>−5.4%</td><td>−11.0%</td><td>−14.2% ⚠</td><td>−9.0%</td></tr>
+            <tr><td>NGFS — Hot House World</td><td>−7.1%</td><td>−14.5%</td><td>−21.0% ⚠⚠</td><td>−13.5%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="card-body source-citation">Modeled stress; full methodology in Risk Agent dossier. Negative = peak-to-trough drawdown vs base case.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h3>Red-Flag Inventory · By Severity</h3></div>
+      <div class="card-body">
+        <div class="flag"><div class="flag-title">CRITICAL · BREIT — Independent valuation coverage 78% &lt; 90% policy threshold</div><div class="flag-detail">Operational Agent · Remediation requested in side letter</div></div>
+        <div class="flag"><div class="flag-title">CRITICAL · BREIT — Redemption gate activations (11 of 16 months 2022–2024)</div><div class="flag-detail">Liquidity Agent · Recommend size cap and 12-mo reassessment</div></div>
+        <div class="flag"><div class="flag-title">CRITICAL · BREIT — Sunbelt 47% concentration with NGFS climate stress &gt; −20%</div><div class="flag-detail">Risk Agent · Scenario-supplemental sizing decision</div></div>
+        <div class="flag amber"><div class="flag-title">ADVISORY · Bridgewater — Key-person concentration (3 co-CIOs)</div><div class="flag-detail">Governance Agent · Mitigant: post-2022 succession plan documented</div></div>
+        <div class="flag amber"><div class="flag-title">ADVISORY · Bridgewater — 2020 drawdown 17.7% below peer benchmark</div><div class="flag-detail">Risk Agent · Subsequent recovery; narrative in IC pre-read</div></div>
+        <div class="flag amber"><div class="flag-title">ADVISORY · Carlyle — Scope 3 emissions disclosure 38% (target 60%)</div><div class="flag-detail">ESG Agent · Sponsor remediation plan committed for 2026</div></div>
+        <div class="flag amber"><div class="flag-title">ADVISORY · Fidelity — Privately-held (limited public financials)</div><div class="flag-detail">Governance · Mitigant: regulated subsidiaries file Form ADV</div></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div id="wb-chrome-bottom"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

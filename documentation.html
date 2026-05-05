@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Documentation Center | World Bank Pension Fund DD Platform — PROTOTYPE</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="documentation.html">
+
+<div id="wb-chrome-top"></div>
+
+<main class="container">
+
+  <div class="page-header">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Documentation Center</div>
+      <h1>Documentation &amp; Audit Trail</h1>
+      <div class="subtitle">Immutable evidence vault, chain-of-custody log, and regulatory document repository.</div>
+    </div>
+    <div>
+      <button class="btn btn-secondary">Generate Court-Grade Binder</button>
+      <button class="btn btn-primary">Export Audit Log</button>
+    </div>
+  </div>
+
+  <div class="grid grid-4" style="margin-bottom:24px;">
+    <div class="kpi"><div class="kpi-label">Total Artifacts Indexed</div><div class="kpi-value">1,247</div><div class="kpi-delta">Across 4 active cases</div></div>
+    <div class="kpi"><div class="kpi-label">Audit Log Entries</div><div class="kpi-value">8,419</div><div class="kpi-delta">Last 30 days</div></div>
+    <div class="kpi success"><div class="kpi-label">Hash Integrity</div><div class="kpi-value">100%</div><div class="kpi-delta">All Merkle roots verified</div></div>
+    <div class="kpi"><div class="kpi-label">Retention Policy</div><div class="kpi-value">25 yr</div><div class="kpi-delta">Per WB pension policy</div></div>
+  </div>
+
+  <!-- Audit Trail -->
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header"><h3>Recent Audit Log Entries · Append-Only</h3><span class="badge badge-blue">Cryptographically Signed</span></div>
+    <div class="card-body" style="padding:0;">
+      <table class="wb-table">
+        <thead><tr><th>Timestamp (UTC)</th><th>Actor</th><th>Action</th><th>Artifact / Target</th><th>Case</th><th>Hash</th></tr></thead>
+        <tbody>
+          <tr><td>2026-05-05 14:32:08</td><td>Risk Agent</td><td>Wrote computed metric</td><td>Pure_Alpha_Sharpe_5yr.json</td><td>BW</td><td>0x4f3e7b...c812</td></tr>
+          <tr><td>2026-05-05 14:31:42</td><td>Liquidity Agent</td><td>Generated stress run</td><td>BREIT_redempt_stress_v3.csv</td><td>BREIT</td><td>0xa9b1f2...4e7d</td></tr>
+          <tr><td>2026-05-05 14:30:51</td><td>Legal &amp; Compliance</td><td>Sanctions scan executed</td><td>OFAC_scan_carlyle_2026-05-05.json</td><td>CG</td><td>0x77b3c9...88e1</td></tr>
+          <tr><td>2026-05-05 14:29:14</td><td>Operational DD</td><td>⚠ Flag raised</td><td>BREIT_indep_valuation_finding.md</td><td>BREIT</td><td>0xc4a2d8...f013</td></tr>
+          <tr><td>2026-05-05 14:28:33</td><td>Documentation Agent</td><td>SHA-256 indexed</td><td>Carlyle_LPA_draft_v4.pdf (12 pages)</td><td>CG</td><td>0x2e9d5b...91aa</td></tr>
+          <tr><td>2026-05-05 14:25:11</td><td>Orchestrator</td><td>Routing decision</td><td>BREIT_redemption_subtask</td><td>BREIT</td><td>0x88ba12...3f41</td></tr>
+          <tr><td>2026-05-05 14:23:00</td><td>Documentation Agent</td><td>Compiled binder</td><td>Carlyle_CP_VIII_evidence_binder.pdf</td><td>CG</td><td>0x55ee10...a7c2</td></tr>
+          <tr><td>2026-05-05 14:22:14</td><td>Governance Agent</td><td>Reviewed key-person provisions</td><td>BW_succession_plan_2022.pdf</td><td>BW</td><td>0xd3a4b6...c901</td></tr>
+          <tr><td>2026-05-05 14:18:50</td><td>jim@sokat.com (human)</td><td>Read access</td><td>BREIT_redempt_stress_v3.csv</td><td>BREIT</td><td>0xa9b1f2...4e7d</td></tr>
+          <tr><td>2026-05-05 14:15:22</td><td>QA Agent</td><td>Verification check</td><td>BW_Sharpe_reconciliation.json</td><td>BW</td><td>0x6e7f80...b231</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header"><h3>Document Categories &amp; Retention</h3></div>
+      <div class="card-body" style="padding:0;">
+        <table class="wb-table">
+          <thead><tr><th>Category</th><th>Count</th><th>Retention</th><th>Standard</th></tr></thead>
+          <tbody>
+            <tr><td>Regulatory filings (Form ADV, 10-K)</td><td>34</td><td>25 yr</td><td>SEC / IOPS</td></tr>
+            <tr><td>Offering documents (PPM, prospectus)</td><td>18</td><td>25 yr</td><td>WB Treasury</td></tr>
+            <tr><td>Audit / financial statements</td><td>67</td><td>25 yr</td><td>IOPS Principle 4</td></tr>
+            <tr><td>SOC 1 / SOC 2 reports</td><td>14</td><td>10 yr</td><td>AICPA / SSAE 18</td></tr>
+            <tr><td>Side letters / IMAs / LPAs</td><td>22</td><td>Life of investment + 10</td><td>WB Legal</td></tr>
+            <tr><td>Sanctions / KYC scans</td><td>89</td><td>10 yr</td><td>FATF</td></tr>
+            <tr><td>Interview transcripts &amp; field-work notes</td><td>156</td><td>15 yr</td><td>WB DD policy</td></tr>
+            <tr><td>Agent outputs / structured data</td><td>847</td><td>25 yr</td><td>Internal</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"><h3>Chain-of-Custody Standards</h3></div>
+      <div class="card-body prose">
+        <p>Every document ingested into the Documentation Vault is processed by the Documentation Agent and recorded with the following chain-of-custody attributes:</p>
+        <ul>
+          <li><strong>SHA-256 hash:</strong> computed at ingest, verified on every read</li>
+          <li><strong>Source attestation:</strong> who provided the document, on what date, via which channel</li>
+          <li><strong>Original preservation:</strong> originals are immutable; redactions captured as overlay</li>
+          <li><strong>Access log:</strong> every read by agent or human is logged with actor / time / IP / purpose</li>
+          <li><strong>Merkle-tree audit log:</strong> log entries are chained; root anchored daily to internal time-stamping authority</li>
+          <li><strong>Court-grade binder:</strong> on demand, generates PDF with table of contents, document index, and verification report suitable for regulatory inspection</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<div id="wb-chrome-bottom"></div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
